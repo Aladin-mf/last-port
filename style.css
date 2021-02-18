@@ -1,0 +1,969 @@
+@import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+:root {
+  --border-color:hsla(0, 0%, 40%, .7);
+  --dot:rgb(197, 197, 197);
+}
+
+*::-moz-selection {
+  background-color: #202020;
+  color: #f4ff20;
+}
+
+*::selection {
+  background-color: #202020;
+  color: #f4ff20;
+}
+
+.side-left {
+  width: 17%;
+  border-right: 1px solid var(--border-color);
+}
+
+.center-section {
+  width: 66%;
+}
+
+.side-right {
+  width: 17%;
+  border-left: 1px solid var(--border-color);
+}
+
+button {
+  font-size: 2.2rem;
+  padding: 6px 35px;
+  background-color: #1a1917;
+  color: #e1f8ff;
+  border-radius: 500px;
+  -webkit-transition: background .5s;
+  transition: background .5s;
+  border: 1.9px solid #596b77;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+.card {
+  background-color: var(--border-color);
+}
+
+.dot {
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  top: 44px;
+  left: -7px;
+  background-color: var(--dot);
+  border-radius: 50%;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transform-origin: 56px;
+          transform-origin: 56px;
+}
+
+@-webkit-keyframes icon {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes icon {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.title h2 {
+  font-family: "Oswald";
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 4rem);
+  text-transform: capitalize;
+  color: #cbd5ff;
+}
+
+.title h4 {
+  font-family: "Reggae One";
+  color: #798aca;
+  text-shadow: 0px 0px 6px #6987ff;
+  text-transform: uppercase;
+}
+
+.card-body {
+  background: #1d1c1c !important;
+}
+
+.card-body .card-title {
+  font-size: 2rem;
+  color: #cbd5ff;
+}
+
+.card-body .card-text {
+  font-size: 1.2rem;
+  color: #838691;
+  font-weight: 500;
+}
+
+.card-body a {
+  display: none;
+}
+
+.portfolio .card:hover {
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+.portfolio .card-body a {
+  display: block;
+  background-color: #1d1c1c;
+  border-color: #9c9ea0;
+  font-size: 1.2rem;
+  font-family: "Oswald";
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.portfolio button {
+  font-size: 1.3rem;
+  outline: none;
+  border: none;
+  background: none;
+  font-family: "Oswald";
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 5px;
+  text-decoration: underline;
+}
+
+.portfolio button:hover {
+  color: #73a5f0;
+}
+
+.grid .col-xl-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.carousel-control-prev:hover {
+  background: transparent;
+}
+
+.carousel-control-next:hover {
+  background: transparent;
+}
+
+.carousel-item img {
+  width: 100px !important;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin-bottom: 2rem !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header nav {
+  border-bottom: 1px solid var(--border-color);
+  background-color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 92px;
+}
+
+header nav .logo {
+  width: 17%;
+  border-right: 1px solid var(--border-color);
+  position: absolute;
+  padding: 20px 12px;
+}
+
+header nav .center-section {
+  width: 66%;
+}
+
+header nav menu {
+  width: 17%;
+  border-left: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+header nav menu .sidebar {
+  position: fixed;
+  right: -250px;
+  height: 100%;
+  background: #000000;
+  width: 250px;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+  z-index: 999;
+}
+
+header nav menu .sidebar ul li a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 25px;
+  color: white;
+  padding-left: 0px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid black;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+header nav menu .sidebar ul li a:hover {
+  padding-left: 60px;
+}
+
+header nav menu .sidebar ul li {
+  list-style-type: none;
+}
+
+header nav menu .sidebar ul li a i {
+  margin-right: 15px;
+}
+
+header nav menu #check {
+  display: none;
+}
+
+header nav menu #btn,
+header nav menu #cancel {
+  position: absolute;
+  background-color: #0d0d0e;
+  border-radius: 5PX;
+  cursor: pointer;
+}
+
+header nav menu #btn {
+  right: 25px;
+  top: 26px;
+  font-size: 35px;
+  color: white;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+header nav menu #cancel {
+  z-index: 111;
+  left: -200px;
+  font-size: 30px;
+  top: 17px;
+  color: white;
+  padding: 4px 9px;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+header nav menu #check:checked ~ .sidebar {
+  right: 0;
+}
+
+header nav menu #check:checked ~ label #btn {
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+header nav menu #check:checked ~ label #cancel {
+  left: 100px;
+}
+
+header nav menu section {
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.hero {
+  background-color: #000000;
+  height: 88vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+}
+
+.hero .side-left {
+  position: relative;
+  z-index: 2;
+}
+
+.hero .side-left .social-icons {
+  position: absolute;
+  padding: 5px;
+  padding-left: 0;
+  bottom: 0;
+  list-style: none;
+  color: #ddd;
+  margin-top: 55px;
+  line-height: 30px;
+}
+
+.hero .side-left .social-icons::before {
+  content: "";
+  width: 1px;
+  height: 116.2px;
+  background-color: #4a5e79;
+  position: absolute;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(0);
+  top: -125px;
+  left: 16px;
+}
+
+.hero .side-left .social-icons::after {
+  font-family: "Reggae One";
+  font-weight: bolder;
+  letter-spacing: 6px;
+  content: "SOCIAL";
+  top: -218px;
+  left: -40px;
+  color: #6f8792;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  position: absolute;
+  font-size: 20px;
+}
+
+.hero .side-left .social-icons ul {
+  padding-left: 10px;
+}
+
+.hero .side-left .social-icons ul li {
+  list-style: none;
+  font-size: 10px;
+}
+
+.hero .side-left .social-icons ul li a i {
+  color: #7d8ba5;
+}
+
+.hero .side-left .social-icons ul li a i:hover {
+  color: #FFFFFF;
+  text-shadow: 0 0 5px #3273ff, 0 0 10px #3a73ee, 0 0 15px #4969f7, 0 0 20px #187cff, 0 0 30px #187cff, 0 0 40px #187cff, 0 0 55px #187cff, 0 0 75px #187cff;
+}
+
+.hero .center-section {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  text-align: start;
+  text-transform: uppercase;
+}
+
+.hero .center-section .container .row .leha {
+  padding-left: 5rem;
+  z-index: 3;
+}
+
+.hero .center-section .container .row .leha:hover::before {
+  right: -55px;
+}
+
+.hero .center-section .container .row .leha .content {
+  font-family: "oswald";
+}
+
+.hero .center-section .container .row .leha .content h4 {
+  color: #abb8d1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  padding-bottom: 1rem;
+  padding-top: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.hero .center-section .container .row .leha .content h4::before {
+  content: "";
+  position: absolute;
+  width: 3rem;
+  height: 1px;
+  background-color: #7f96a9;
+  top: 31px;
+  right: -42px;
+}
+
+.hero .center-section .container .row .leha .content h1 {
+  font-size: clamp(45px, 6vw, 170px);
+  color: #ddedf7;
+  padding-bottom: 1.5rem;
+  text-shadow: -5px -1px 2px #346fbb;
+}
+
+.hero .center-section .container .row .chobi {
+  z-index: 2;
+}
+
+.hero .center-section .container .row .chobi .main-image {
+  -webkit-animation: lorachora 7s 2s alternate infinite;
+          animation: lorachora 7s 2s alternate infinite;
+}
+
+.hero .side-right {
+  position: relative;
+}
+
+.hero .side-right .text {
+  position: absolute;
+  bottom: 70px;
+  color: blanchedalmond;
+  width: 60px;
+}
+
+.hero .side-right .text h3 {
+  font-size: clamp(0.15rem, 2vw, 1.2rem);
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  letter-spacing: 2px;
+}
+
+@-webkit-keyframes lorachora {
+  from {
+    -webkit-transform: scale3d(0.87, 0.87, 0.87);
+            transform: scale3d(0.87, 0.87, 0.87);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes lorachora {
+  from {
+    -webkit-transform: scale3d(0.87, 0.87, 0.87);
+            transform: scale3d(0.87, 0.87, 0.87);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+main {
+  background-color: #000000;
+  color: whitesmoke;
+  z-index: 1;
+}
+
+main .about-me {
+  position: relative;
+  border-bottom: 1px solid var(--border-color);
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .about-me::before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--border-color);
+  z-index: 2;
+}
+
+main .about-me .bordered {
+  background-color: var(--border-color);
+}
+
+main .about-me .center-section {
+  margin: 15rem 0rem;
+  z-index: 3;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+main .about-me .center-section .container .row .chobi {
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+main .about-me .center-section .container .row .leha .content header {
+  padding-bottom: .6rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+main .about-me .center-section .container .row .leha .content header::after {
+  content: "";
+  width: 15rem;
+  height: 2px;
+  position: absolute;
+  left: -10px;
+  bottom: 0;
+  background: #9b9b9b;
+}
+
+main .about-me .center-section .container .row .leha .content header h2 {
+  font-size: 3rem;
+}
+
+main .about-me .center-section .container .row .leha .content main {
+  background-color: transparent;
+}
+
+main .about-me .center-section .container .row .leha .content main p {
+  font-size: 1.5rem;
+  background-color: transparent;
+  color: #b3b2b2;
+  font-weight: 600;
+}
+
+main .about-me .center-section .container .row .leha .content .cv {
+  margin-top: 2rem;
+}
+
+main .about-me .center-section .container .row .leha .content .cv button {
+  font-family: "oswald";
+  text-transform: uppercase;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  letter-spacing: 1.5px;
+}
+
+main .bordered {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: var(--border-color);
+}
+
+.pic:hover:before {
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+.pic:hover:after {
+  -webkit-transform: rotate(100deg);
+          transform: rotate(100deg);
+}
+
+.service {
+  border-bottom: 1px solid var(--border-color);
+  background: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+}
+
+.service .center-section .card .card-img {
+  background: #1d1c1c;
+}
+
+.service .center-section .card:hover .dot {
+  -webkit-animation: icon 2s linear infinite;
+          animation: icon 2s linear infinite;
+}
+
+.service .center-section .card .icon {
+  margin: 20px 0px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid;
+  border-radius: 50%;
+  position: relative;
+  color: white;
+}
+
+.portfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0.85)));
+  background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.85));
+  border-bottom: 1px solid var(--border-color);
+}
+
+.portfolio .center-section {
+  margin: 3rem 0rem;
+}
+
+.portfolio .center-section .col-xl-3 {
+  background: transparent;
+}
+
+.portfolio .center-section .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.portfolio .center-section ul {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.portfolio .center-section ul li {
+  list-style: none;
+  padding-right: 1rem;
+  line-height: 2;
+}
+
+.portfolio .center-section ul li a {
+  font-size: 1.45rem;
+  color: #d8e7ff;
+  text-decoration: none;
+  font-family: "Oswald";
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.comment {
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: rgba(0, 0, 0, 0.85);
+  border-bottom: 1px solid var(--border-color);
+  color: #187cff;
+  font-size: 2rem;
+}
+
+.comment .center-section {
+  padding: 5rem 0rem;
+}
+
+.cmnt {
+  position: relative;
+}
+
+.cmnt #carouselExampleIndicators {
+  z-index: 3;
+}
+
+.cmnt svg {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+.prt {
+  position: relative;
+}
+
+.prt .portfolio {
+  z-index: 4;
+}
+
+.prt svg {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.another {
+  position: relative;
+  z-index: 1;
+  color: #878282;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.another .price {
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0.816)));
+  background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.816));
+}
+
+.another .price .center-section {
+  margin: 7rem 0rem;
+}
+
+.another .price .center-section .container .row {
+  font-family: "Oswald";
+  letter-spacing: 1px;
+  font-weight: 600;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.another .price .center-section .container .row .card .top {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background: black;
+}
+
+.another .price .center-section .container .row .card .img {
+  width: 100px;
+  height: 100px;
+  border: 5px solid #d3d1d1;
+  display: -ms-grid;
+  display: grid;
+  border-radius: 50%;
+  margin: 2rem 0rem;
+  background: #4b4a4a;
+  place-items: center;
+}
+
+.another .price .center-section .container .row .card .img i {
+  color: white;
+}
+
+.another .price .center-section .container .row .card ul li {
+  border-bottom: 1px solid #80808282;
+  border-top: 1px solid #7b7c7e7e;
+  font-size: 1.3rem;
+  color: #bfbfbf !important;
+}
+
+.another .price .center-section .container .row .card a {
+  display: block;
+  text-decoration: none;
+  color: #ddd;
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid;
+  font-size: 1.4rem;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.another .price .center-section .container .row .card a:hover {
+  background: #e7f3ff;
+  color: #2c2929;
+}
+
+.another svg {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+.contact {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.contact .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: black;
+}
+
+.contact .wrapper .center-section input {
+  border: none;
+  margin: 1rem 0;
+  background-color: #2e2b2b;
+  padding: 1rem;
+  color: white;
+  font-family: 'Oswald';
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+
+.contact .wrapper .center-section input::-webkit-input-placeholder {
+  color: #a9a8a6;
+  font-weight: 600;
+  font-family: 'Oswald';
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+
+.contact .wrapper .center-section input:-ms-input-placeholder {
+  color: #a9a8a6;
+  font-weight: 600;
+  font-family: 'Oswald';
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+
+.contact .wrapper .center-section input::-ms-input-placeholder {
+  color: #a9a8a6;
+  font-weight: 600;
+  font-family: 'Oswald';
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+
+.contact .wrapper .center-section input::placeholder {
+  color: #a9a8a6;
+  font-weight: 600;
+  font-family: 'Oswald';
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+
+.contact .wrapper .center-section .col-12 textarea {
+  resize: none;
+  border: none;
+  margin: 1rem 0;
+  background: #37342f;
+  color: white;
+  font-family: 'Oswald';
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+
+.contact .wrapper .center-section .col-12 textarea::-webkit-input-placeholder {
+  color: #a9a8a6;
+  font-weight: 600;
+  font-family: 'Oswald';
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+
+.contact .wrapper .center-section .col-12 textarea:-ms-input-placeholder {
+  color: #a9a8a6;
+  font-weight: 600;
+  font-family: 'Oswald';
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+
+.contact .wrapper .center-section .col-12 textarea::-ms-input-placeholder {
+  color: #a9a8a6;
+  font-weight: 600;
+  font-family: 'Oswald';
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+
+.contact .wrapper .center-section .col-12 textarea::placeholder {
+  color: #a9a8a6;
+  font-weight: 600;
+  font-family: 'Oswald';
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+
+.contact .wrapper .center-section button {
+  font-size: 1.5rem;
+  padding: 6px 25px;
+}
+
+.contact .wrapper .center-section .leha {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-grid-rows: 1fr 5fr;
+      grid-template-rows: 1fr 5fr;
+  text-align: center;
+}
+
+.contact .wrapper .center-section .leha .new {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact .wrapper .center-section .leha h1 {
+  color: #cbd5ff;
+  font-family: 'Oswald';
+  text-transform: uppercase;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  display: block;
+}
+
+.contact .wrapper .center-section .leha p, .contact .wrapper .center-section .leha .mail {
+  color: silver;
+  font-size: 1.3rem;
+  padding: 5px 0;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: black;
+}
+
+footer .center-section {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  margin: 5rem 0rem;
+}
+
+footer .center-section menu {
+  padding: 1rem;
+}
+
+footer .center-section menu a {
+  padding: 1rem;
+}
+
+footer .center-section menu a i {
+  font-size: 2rem;
+  color: #dbe9f7;
+  -webkit-transition: .1s linear;
+  transition: .1s linear;
+}
+
+footer .center-section menu a i:hover {
+  color: #93b2ff;
+}
+
+footer .center-section .cpy {
+  font-size: 1.5rem;
+  color: #d9e5fc;
+  font-family: 'Reggae One';
+}
+/*# sourceMappingURL=style.css.map */
